@@ -21,7 +21,7 @@ ProjectName and Description
     <img src="fig/workflow.svg" alt="Logo" width="500" height="400">
   </a>
 
-  <h3 align="center">"传统视觉方法实现车牌检测</h3>
+  <h3 align="center">传统视觉方法实现车牌检测</h3>
   <p align="center">
     一个"完美的"README模板去快速开始你的项目！
     <br />
