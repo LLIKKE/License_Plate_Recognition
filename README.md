@@ -1,17 +1,11 @@
 
 
-# ProjectName
+# 传统视觉方法实现车牌检测与识别
 
-ProjectName and Description
+C_N_U IE 的计算机视觉课程的期中实验考核，着重于传统计算机视觉方法实现车牌检测与识别。
 
-<!-- PROJECT SHIELDS -->
+Mid-term examination for C_N_U IE's computer vision course focusing on traditional computer vision methods to achieve licence plate detection and recognition.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -21,24 +15,11 @@ ProjectName and Description
     <img src="fig/workflow.svg" alt="Logo" width="500" height="400">
   </a>
 
-  <h3 align="center">传统视觉方法实现车牌检测</h3>
+  <h3 align="center">传统视觉方法实现车牌检测与识别</h3>
   <p align="center">
-    一个"完美的"README模板去快速开始你的项目！
-    <br />
-    <a href="https://github.com/shaojintian/Best_README_template"><strong>探索本项目的文档 »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
-    ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
-    ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
-  </p>
 
 </p>
 
-
- 本篇README.md面向开发者
  
 ## 目录
 
@@ -55,124 +36,83 @@ ProjectName and Description
 - [作者](#作者)
 - [鸣谢](#鸣谢)
 
-### 上手指南
-
-请将所有链接中的“shaojintian/Best_README_template”改为“your_github_name/your_repository”
-
-
-
-###### 开发前的配置要求
-
-1. xxxxx x.x.x
-2. xxxxx x.x.x
-
-###### **安装步骤**
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-
-```sh
-git clone https://github.com/shaojintian/Best_README_template.git
-```
-
-### 文件目录说明
-eg:
+### 项目结构说明
 
 ```
-filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
+License_Plate_Recognition
+├── LPR_chi.py
+├── LPR_en.py
 ├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
-
+├── Real Tme LPR system.py
+├── Video_LPR.py
+├── README.md
+├─fig
+│      workflow.svg
+├─image_chi
+│      sample.jpg
+└─image_en
+        06 CGN 419.jpg
 ```
 
+### 上手指南
+1. 根据导入头文件安装相应包
+2. 访问[https://digi.bib.uni-mannheim.de/tesseract/](https://digi.bib.uni-mannheim.de/tesseract/) 安装相应tesseract，选择其程序路径
+```python
+pytesseract.pytesseract.tesseract_cmd = r'D:\tesseract\tesseract.exe'
+```
+3. "LPR_chi.py"实现蓝底白字车牌识别,输入相应图片路径即可
+```python
+# todo: 国内车牌检测，国内车牌蓝底白字，特征提取不明显，因此做了额外的增强
+img = cv2.imread("image_chi/sample2.png")
+Plate_Recognition(img)
+```
+4. "LPR_chi.py"实现白底黑字车牌识别,输入相应图片路径即可
+```python
+img = cv2.imread("image_en/06 CGN 419.jpg")
+Plate_Recognition(img)
+```
+
+5. "Video_LPR.py"实现对视频数据的车牌识别，在上方输入视频路径
+```python
+cap = cv2.VideoCapture('car1.mp4')
+```
+6. "Real Tme LPR system.py"实现使用设备摄像头实时获得车辆图像进行车牌识别
+
+### Demo效果
+传统方法实现车牌定位受图像分辨率、色偏、车距影响较大，因此很多时候需要自己调整一下
+###### **白底黑字车牌效果**
+白底黑字车牌效果，不知道是不是OCR的原因，白底黑字效果要好很多。
+<div style="text-align:center;">
+    <img src="image_en/26_EJ_668.jpeg" alt="26 20EJ 20668.jpeg" width="200" height="200" />
+</div>
+<div style="text-align:center;">
+    <img src="fig/26EJ668.png" alt="Workflow" width="500" height="140" />
+</div>
 
 
+###### **蓝底白字车牌效果**
+<div style="text-align:center;">
+    <img src="fig/L66666.png" alt="image_chi/sample4.jpg" width="220" height="200" />
+</div>
+<div style="text-align:center;">
+    <img src="fig/LB66666.png" alt="Workflow" width="500" height="140" />
+</div>
 
 
-### 开发的架构 
-
-请阅读[ARCHITECTURE.md](https://github.com/shaojintian/Best_README_template/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
-
-### 部署
-
-暂无
-
-### 使用到的框架
-
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
-
-### 贡献者
-
-请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
-
-#### 如何参与开源项目
-
-贡献使开源社区成为一个学习、激励和创造的绝佳场所。你所作的任何贡献都是**非常感谢**的。
-
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-### 版本控制
-
-该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
+###### **视频车牌检测*
+<iframe width="300" height="300" src="https://github.com/LLIKKE/License_Plate_Recognition/blob/master/video_result.mp4" frameborder="0" allowfullscreen></iframe>
 
 ### 作者
 
-xxx@xxxx
+LLIKKE
 
-知乎:xxxx  &ensp; qq:xxxxxx    
+为了防止滥用实验报告不选择公开，如果想要参考可以点个**star**，再发送邮件至 <wsdfn2024@163.com> 联系我。
 
- *您也可以在贡献者名单中参看所有参与该项目的开发者。*
-
-### 版权说明
-
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
-
-### 鸣谢
+<div style="text-align:center;">
+    <img src="fig/doc.png" alt="Workflow" width="300" height="400" />
+</div>
 
 
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Img Shields](https://shields.io)
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Pages](https://pages.github.com)
-- [Animate.css](https://daneden.github.io/animate.css)
-- [xxxxxxxxxxxxxx](https://connoratherton.com/loaders)
-
-<!-- links -->
-[your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
-[contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
-[forks-url]: https://github.com/shaojintian/Best_README_template/network/members
-[stars-shield]: https://img.shields.io/github/stars/shaojintian/Best_README_template.svg?style=flat-square
-[stars-url]: https://github.com/shaojintian/Best_README_template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg
-[license-shield]: https://img.shields.io/github/license/shaojintian/Best_README_template.svg?style=flat-square
-[license-url]: https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/shaojintian
 
 
 

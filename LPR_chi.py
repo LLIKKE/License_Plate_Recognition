@@ -192,7 +192,7 @@ def Plate_Recognition(img):
 
 if __name__ == '__main__':
     # todo: 国内车牌检测，国内车牌蓝底白字，特征提取不明显，因此做了额外的增强
-    img = cv2.imread("image_chi/sample2.png")
+    img = cv2.imread("image_chi/sample4.png")
     Plate_Recognition(img)
 
 

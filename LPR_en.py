@@ -174,7 +174,7 @@ def Plate_Recognition(img):
 
 if __name__ == '__main__':
 
-    img = cv2.imread("dfn.jpg")
+    img = cv2.imread("image_en/06 CGN 419.jpg")
     Plate_Recognition(img)
 
 
