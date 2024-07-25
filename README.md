@@ -84,8 +84,8 @@ cap = cv2.VideoCapture('car1.mp4')
 
 
 ###### **视频车牌检测*
-video_result.mp4
-
+[video_result.mp4
+](https://github.com/user-attachments/assets/5f9a2fb4-7d5e-49d6-8316-79e1b0ec6a7a)
 ### 作者
 
 LLIKKE
