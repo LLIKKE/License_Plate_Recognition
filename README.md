@@ -20,22 +20,6 @@ Mid-term examination for C_N_U IE's computer vision course focusing on tradition
 
 </p>
 
- 
-## 目录
-
-- [上手指南](#上手指南)
-  - [开发前的配置要求](#开发前的配置要求)
-  - [安装步骤](#安装步骤)
-- [文件目录说明](#文件目录说明)
-- [开发的架构](#开发的架构)
-- [部署](#部署)
-- [使用到的框架](#使用到的框架)
-- [贡献者](#贡献者)
-  - [如何参与开源项目](#如何参与开源项目)
-- [版本控制](#版本控制)
-- [作者](#作者)
-- [鸣谢](#鸣谢)
-
 ### 项目结构说明
 
 ```
@@ -100,7 +84,7 @@ cap = cv2.VideoCapture('car1.mp4')
 
 
 ###### **视频车牌检测*
-<iframe width="300" height="300" src="https://github.com/LLIKKE/License_Plate_Recognition/blob/master/video_result.mp4" frameborder="0" allowfullscreen></iframe>
+video_result.mp4
 
 ### 作者
 
