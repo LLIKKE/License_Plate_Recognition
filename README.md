@@ -2,9 +2,9 @@
 
 # 传统视觉方法实现车牌检测与识别
 
-C_N_U IE 的计算机视觉课程的期中实验考核，着重于传统计算机视觉方法实现车牌检测与识别。
+计算机视觉课程的期中实验考核，着重于传统计算机视觉方法实现车牌检测与识别。
 
-Mid-term examination for C_N_U IE's computer vision course focusing on traditional computer vision methods to achieve licence plate detection and recognition.
+Mid-term examination for computer vision course focusing on traditional computer vision methods to achieve licence plate detection and recognition.
 
 
 <!-- PROJECT LOGO -->
